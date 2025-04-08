@@ -31,4 +31,4 @@ dependencyResolutionManagement {
 }
 
 include(":mobileApp")
-include(":scanAndConnectDevices")
+include(":scan-and-connect-devices")
