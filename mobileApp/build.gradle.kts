@@ -23,6 +23,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(libs.lifecycle.viewmodel.compose)
             implementation(libs.navigation.compose)
             implementation(compose.components.resources)
             implementation(compose.foundation)
