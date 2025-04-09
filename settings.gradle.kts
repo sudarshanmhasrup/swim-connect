@@ -30,5 +30,6 @@ dependencyResolutionManagement {
     }
 }
 
+include(":androidApp")
 include(":mobileApp")
 include(":scan-and-connect-device")
