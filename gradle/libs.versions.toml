@@ -18,6 +18,10 @@ android-versionName = "1.0.0"
 designSystem-groupId = "com.design.system"
 designSystem-version = "1.0.0-SNAPSHOT"
 
+# Shared module
+shared-groupId = "com.compose.shared"
+shared-version = "1.0.0-SNAPSHOT"
+
 # Mobile app module
 mobileApp-groupId = "com.swimconnect.app"
 mobileApp-version = "1.0.0-SNAPSHOT"
