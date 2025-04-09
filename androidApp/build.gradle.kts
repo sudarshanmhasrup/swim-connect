@@ -22,9 +22,15 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.activity.compose)
 }
+
+// Custom build directory
+layout.buildDirectory.set(file("$rootDir/.build/androidApp"))
