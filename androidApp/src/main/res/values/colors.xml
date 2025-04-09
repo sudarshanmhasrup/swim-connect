@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="cinder">#FF101418</color>
+    <color name="water_blue">#FF0084CA</color>
 </resources>
