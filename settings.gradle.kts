@@ -33,3 +33,4 @@ dependencyResolutionManagement {
 include(":androidApp")
 include(":mobileApp")
 include(":designSystem")
+include(":shared")
