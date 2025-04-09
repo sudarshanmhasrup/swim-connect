@@ -14,3 +14,7 @@ android {
         versionName = libs.versions.android.versionName.get()
     }
 }
+
+dependencies {
+    implementation(libs.androidx.activity.compose)
+}
