@@ -25,7 +25,7 @@ kotlin {
 }
 
 android {
-    namespace = libs.versions.android.applicationId.get()
+    namespace = libs.versions.designSystem.groupId.get()
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 }
 
