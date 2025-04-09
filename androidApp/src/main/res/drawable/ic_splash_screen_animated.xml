@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="66dp"
+            android:height="66dp"
+            android:viewportWidth="66"
+            android:viewportHeight="66">
+
+            <group
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:translateX="13.2"
+                android:translateY="13.2">
+
+                <path
+                    android:name="wavePath"
+                    android:pathData="M41.479 47C35.1814 47 32.795 38.1582 31.5123 33.4091C29.929 27.5416 27.985 22.1111 24.521 22.1111C21.8447 22.1111 18.3066 28.1591 17.5774 36.2511C17.4988 37.1067 16.7665 37.7336 15.9016 37.6604C15.0537 37.5827 14.4294 36.8251 14.5064 35.9711C15.2572 27.6287 19.21 19 24.521 19C30.8186 19 33.205 27.8418 34.4877 32.5909C36.071 38.4584 38.015 43.8889 41.479 43.8889C44.1553 43.8889 47.6934 37.8409 48.4226 29.7489C48.5012 28.8933 49.2304 28.2711 50.0984 28.3396C50.9463 28.4173 51.5706 29.1749 51.4936 30.0289C50.7428 38.3713 46.79 47 41.479 47Z"
+                    android:strokeColor="#FFFFFFFF"
+                    android:strokeWidth="4"
+                    android:trimPathStart="0"
+                    android:trimPathEnd="0"
+                    android:strokeLineCap="round" />
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="wavePath">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1000"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+</animated-vector>
+
