@@ -14,6 +14,13 @@ android {
         versionCode = libs.versions.android.versionCode.get().toInt()
         versionName = libs.versions.android.versionName.get()
     }
+    compileOptions {
+        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
