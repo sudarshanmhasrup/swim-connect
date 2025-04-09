@@ -5,6 +5,9 @@ plugins {
     alias(libs.plugins.compose.multiplatform)
 }
 
+group = libs.versions.mobileApp.groupId.get()
+version = libs.versions.mobileApp.version.get()
+
 kotlin {
     androidTarget()
 
@@ -17,9 +20,23 @@ kotlin {
             baseName = "SwimConnect"
         }
     }
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(libs.navigation.compose)
+            implementation(compose.components.resources)
+            implementation(compose.foundation)
+            implementation(compose.ui)
+            implementation(project(":designSystem"))
+            implementation(project(":shared"))
+        }
+    }
 }
 
 android {
-    namespace = libs.versions.android.applicationId.get()
+    namespace = "com.swimconnect.xr"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 }
+
+// Custom build directory
+layout.buildDirectory.set(file("$rootDir/.build/mobileApp"))
