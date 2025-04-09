@@ -16,3 +16,8 @@ kotlin {
         }
     }
 }
+
+android {
+    namespace = libs.versions.android.applicationId.get()
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
+}
