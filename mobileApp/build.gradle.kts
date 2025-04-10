@@ -30,12 +30,13 @@ kotlin {
             implementation(compose.ui)
             implementation(project(":designSystem"))
             implementation(project(":shared"))
+            api(project(":platform-apis"))
         }
     }
 }
 
 android {
-    namespace = "com.swimconnect.xr"
+    namespace = libs.versions.mobileApp.groupId.get()
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 }
 
