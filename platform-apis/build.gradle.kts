@@ -12,6 +12,13 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+
+    sourceSets {
+        commonMain.dependencies {
+            api(libs.androidx.datastore.preferences)
+            api(libs.androidx.datastore)
+        }
+    }
 }
 
 android {
