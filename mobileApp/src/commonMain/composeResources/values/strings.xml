@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwimConnect</string>
+    <string name="empty_error_string">None</string>
+    <string name="landing_page_message">Monitor your child's swimming status with the SwimConnect app.</string>
+    <string name="landing_page_button_title">Let's Connect</string>
+    <string name="finish_setup_page_heading">Hold on</string>
+    <string name="finish_setup_page_message">It looks like you haven't completed the app setup yet. Fill in the basic form details to finish the setup and start using the app.</string>
+    <string name="finish_setup_button_title">Finish setup</string>
+</resources>
