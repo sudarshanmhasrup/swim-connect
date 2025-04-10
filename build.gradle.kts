@@ -6,3 +6,6 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.compose.multiplatform) apply false
 }
+
+// Custom build directory
+layout.buildDirectory.set(file("$rootDir/.build/project"))
