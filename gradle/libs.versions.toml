@@ -7,6 +7,7 @@ coreSplashscreen = "1.0.1"
 composeMultiplatform = "1.7.3"
 navigationCompose = "2.9.0-alpha15"
 lifecycleViewmodelCompose = "2.8.4"
+datastore = "1.1.4"
 
 # Android app package information
 android-applicationId = "com.swimconnect.app"
@@ -24,6 +25,10 @@ designSystem-version = "1.0.0-SNAPSHOT"
 shared-groupId = "com.compose.shared"
 shared-version = "1.0.0-SNAPSHOT"
 
+# Platform APIs module
+platformApis-groupId = "com.swimconnect.app"
+platformApis-version = "1.0.0-SNAPSHOT"
+
 # Mobile app module
 mobileApp-groupId = "com.swimconnect.app"
 mobileApp-version = "1.0.0-SNAPSHOT"
@@ -33,6 +38,8 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
