@@ -22,7 +22,7 @@ import com.swimconnect.app.mobileapp.generated.resources.app_name
 import com.swimconnect.app.mobileapp.generated.resources.ic_swimming
 import com.swimconnect.app.mobileapp.generated.resources.landing_page_button_title
 import com.swimconnect.app.mobileapp.generated.resources.landing_page_message
-import com.swimconnect.mobile.presentation.navigation.routes.ComposeAppRoutes
+import com.swimconnect.app.presentation.navigation.routes.ComposeAppRoutes
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
