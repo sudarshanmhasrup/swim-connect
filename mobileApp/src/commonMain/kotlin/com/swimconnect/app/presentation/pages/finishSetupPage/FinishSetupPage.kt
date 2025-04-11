@@ -17,7 +17,7 @@ import com.swimconnect.app.mobileapp.generated.resources.finish_setup_button_tit
 import com.swimconnect.app.mobileapp.generated.resources.finish_setup_page_heading
 import com.swimconnect.app.mobileapp.generated.resources.finish_setup_page_message
 import com.swimconnect.app.mobileapp.generated.resources.incomplete_setup_image
-import com.swimconnect.mobile.presentation.navigation.routes.ComposeAppRoutes
+import com.swimconnect.app.presentation.navigation.routes.ComposeAppRoutes
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
