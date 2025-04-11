@@ -1,7 +1,6 @@
 package com.swimconnect.app.theme
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import com.design.system.api.ComposeAppTheme
 import com.design.system.colors.Colors
 
@@ -13,12 +12,20 @@ val lightColorScheme = Colors(
     secondaryFontColor = secondaryTextColorLight,
     borderColor = borderColorLight,
     inputHintColor = inputHintColorLight,
-    primaryDisabledColor = primaryDisabledColor,
-    inputErrorColor = inputErrorColorLight
+    primaryDisabledColor = primaryDisabledColorLight,
+    inputErrorColor = inputErrorColor
 )
 
 val darkColorScheme = Colors(
-    backgroundColor = Color.Black
+    backgroundColor = backgroundColorDark,
+    primaryColor = primaryColor,
+    secondaryColor = secondaryColorDark,
+    primaryFontColor = primaryTextColorDark,
+    secondaryFontColor = secondaryTextColorDark,
+    borderColor = borderColorDark,
+    inputHintColor = inputHintColorDark,
+    primaryDisabledColor = primaryDisabledColorDark,
+    inputErrorColor = inputErrorColor
 )
 
 @Composable
