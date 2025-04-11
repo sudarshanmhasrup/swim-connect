@@ -84,7 +84,10 @@ fun PrimaryUserInputField(
                 value = TextFieldValue(text = value, selection = TextRange(index = value.length)),
                 singleLine = true,
                 keyboardOptions = keyboardOptions,
-                textStyle = ComposeAppTheme.typography.inputLabel.copy(textAlign = TextAlign.Center),
+                textStyle = ComposeAppTheme.typography.inputLabel.copy(
+                    color = ComposeAppTheme.colors.primaryFontColor,
+                    textAlign = TextAlign.Center
+                ),
                 keyboardActions = keyboardActions,
                 modifier = basicTextFieldModifier,
                 onValueChange = { onValueChange(it.text) }
