@@ -5,6 +5,7 @@ import com.platform.api.util.UserPreferenceManager
 
 class ComposeAppViewModel : ViewModel() {
     private val landingPageViewedStatusPreferenceKey = "landing-page-viewed-status"
+    private val childDetailsPageViewedStatusPreferenceKey = "child-details-page-viewed-status"
 
     fun saveLandingPageAsViewed() {
         UserPreferenceManager.savePreference(
@@ -21,10 +22,16 @@ class ComposeAppViewModel : ViewModel() {
     }
 
     fun checkIfChildDetailsPageIsViewed(): Boolean {
-        return false
+        val childDetailsPageViewStatus = UserPreferenceManager.getPreference(
+            key = childDetailsPageViewedStatusPreferenceKey
+        )
+        return true
     }
 
     fun saveChildDetailsPageAsViewed() {
-
+        UserPreferenceManager.savePreference(
+            key = childDetailsPageViewedStatusPreferenceKey,
+            value = "viewed"
+        )
     }
 }
