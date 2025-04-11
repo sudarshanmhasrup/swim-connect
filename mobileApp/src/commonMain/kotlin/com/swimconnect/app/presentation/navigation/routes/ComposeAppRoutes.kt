@@ -1,4 +1,4 @@
-package com.swimconnect.mobile.presentation.navigation.routes
+package com.swimconnect.app.presentation.navigation.routes
 
 object ComposeAppRoutes {
     const val LANDING_PAGE = "LandingPage"
