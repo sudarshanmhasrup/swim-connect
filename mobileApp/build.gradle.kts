@@ -31,6 +31,7 @@ kotlin {
             implementation(project(":designSystem"))
             implementation(project(":shared"))
             api(project(":platform-apis"))
+            implementation(project(":child-details"))
         }
     }
 }
