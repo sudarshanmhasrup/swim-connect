@@ -25,7 +25,7 @@ fun HeadingAndMessage(
     val secondaryFontColor = ComposeAppTheme.colors.secondaryFontColor
     Column(modifier = modifier) {
         BasicText(
-            text = stringResource(resource =  heading),
+            text = stringResource(resource = heading),
             style = ComposeAppTheme.typography.bodyHeadline.copy(textAlign = TextAlign.Center),
             color = ColorProducer { primaryFontColor },
             modifier = Modifier.fillMaxWidth()
