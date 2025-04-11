@@ -62,11 +62,7 @@ fun ChildDetailsPage(
                 childDetailsPageNavController = childDetailsPageNavController
             )
         }
-        AnimatedVisibility(
-            childDetailsUiState.value.showBackButtonContainer,
-            enter = fadeIn(animationSpec = tween(0)),
-            exit = fadeOut(animationSpec = tween(0))
-        ) {
+        if(childDetailsUiState.value.showBackButtonContainer) {
             BackButtonContainer(
                 modifier = Modifier.backButtonContainerModifier(),
                 onBackButtonClicked = {

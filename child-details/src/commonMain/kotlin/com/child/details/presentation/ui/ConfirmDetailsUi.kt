@@ -42,9 +42,6 @@ fun ConfirmDetailsUi(
     // Show confirmation page heading
     childDetailsPageViewModel.showConfirmationPageHeading()
 
-    // Hide back button container as user is navigating to this screen.
-    childDetailsPageViewModel.hideBackButtonContainer()
-
     Column(modifier = modifier) {
         confirmChildDetailsOptionList.forEach { option ->
             val annotatedString = annotatedString(label = option.label, value = option.value)
@@ -53,8 +50,8 @@ fun ConfirmDetailsUi(
                 modifier = Modifier.buttonStyleListItemModifier(),
                 onClick = {
                     childDetailsPageNavController.navigate(option.route)
-                    childDetailsPageViewModel.hideBackButtonContainer()
                     childDetailsPageViewModel.turnOnEditingMode()
+                    childDetailsPageViewModel.hideBackButtonContainer()
                     childDetailsPageViewModel.hideConfirmationPageHeading()
                 }
             )

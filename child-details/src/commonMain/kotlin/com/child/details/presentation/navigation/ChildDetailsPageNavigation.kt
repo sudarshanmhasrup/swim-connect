@@ -32,11 +32,12 @@ fun ChildDetailsPageNavigation(
     val childDetailsPageUiState = childDetailsPageViewModel.childDetailsUiState.value
 
     val startDestination = if (childDetailsPageUiState.modeOfAlert == null) {
-        childDetailsPageViewModel.hideBackButtonContainer()
         ChildDetailsPageRoutes.CHILD_NAME_INPUT_UI
     } else {
         ChildDetailsPageRoutes.CONFIRM_DETAILS_UI
     }
+
+    childDetailsPageViewModel.hideBackButtonContainer()
 
     NavHost(
         navController = childDetailsPageNavController,

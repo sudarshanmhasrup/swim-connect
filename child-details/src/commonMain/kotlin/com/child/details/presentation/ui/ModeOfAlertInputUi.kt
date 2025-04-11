@@ -26,14 +26,6 @@ fun ModeOfAlertInputUi(
 ) {
     val childDetailsUiState = childDetailsPageViewModel.childDetailsUiState.collectAsState()
 
-    /*
-        Show back button container as user is navigating to this screen only if user is not editing
-        information.
-    */
-    if (!childDetailsUiState.value.isEditingInformation) {
-        childDetailsPageViewModel.showBackButtonContainer()
-    }
-
     val primaryButtonLabel = if (childDetailsUiState.value.isEditingInformation) {
         Res.string.save_button_label
     } else {
@@ -85,6 +77,7 @@ private val primaryButtonClickEvent: (
 ) -> Unit =
     { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableSixthContinueButton ->
         childDetailsPageViewModel.saveModeOfAlert()
+        childDetailsPageViewModel.hideBackButtonContainer()
         when {
             enableSixthContinueButton && !isEditingInformation -> {
                 childDetailsPageNavController.navigate(
