@@ -12,8 +12,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.child.details.presentation.ChildDetailsPage
 import com.child.details.presentation.ChildDetailsPageViewModel
-import com.compose.shared.viewmodel.ComposeAppViewModel
 import com.compose.shared.routes.ComposeAppRoutes
+import com.compose.shared.viewmodel.ComposeAppViewModel
 import com.swimconnect.app.presentation.pages.finishSetupPage.FinishSetupPage
 import com.swimconnect.app.presentation.pages.landingPage.LandingPageScreen
 

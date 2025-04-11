@@ -12,12 +12,12 @@ import com.compose.shared.components.HeadingAndMessage
 import com.compose.shared.components.PrimaryButton
 import com.compose.shared.extentions.finishAccountSetupPageHeadingAndMessageModifier
 import com.compose.shared.extentions.finishSetupPagePrimaryButtonAndContainerModifier
+import com.compose.shared.routes.ComposeAppRoutes
 import com.swimconnect.app.mobileapp.generated.resources.Res
 import com.swimconnect.app.mobileapp.generated.resources.finish_setup_button_title
 import com.swimconnect.app.mobileapp.generated.resources.finish_setup_page_heading
 import com.swimconnect.app.mobileapp.generated.resources.finish_setup_page_message
 import com.swimconnect.app.mobileapp.generated.resources.incomplete_setup_image
-import com.swimconnect.app.presentation.navigation.routes.ComposeAppRoutes
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

@@ -16,13 +16,13 @@ import com.compose.shared.components.HeadingAndMessage
 import com.compose.shared.components.PrimaryButton
 import com.compose.shared.extentions.landingPageHeadingAndMessageModifier
 import com.compose.shared.extentions.letsConnectButtonAndBackgroundModifier
+import com.compose.shared.routes.ComposeAppRoutes
 import com.compose.shared.viewmodel.ComposeAppViewModel
 import com.swimconnect.app.mobileapp.generated.resources.Res
 import com.swimconnect.app.mobileapp.generated.resources.app_name
 import com.swimconnect.app.mobileapp.generated.resources.ic_swimming
 import com.swimconnect.app.mobileapp.generated.resources.landing_page_button_title
 import com.swimconnect.app.mobileapp.generated.resources.landing_page_message
-import com.swimconnect.app.presentation.navigation.routes.ComposeAppRoutes
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -74,12 +74,12 @@ private fun LetsConnectButtonAndBackground(
             label = Res.string.landing_page_button_title,
             enabled = true,
             onClick = {
+                composeAppViewModel.saveLandingPageAsViewed()
                 composeAppNavController.navigate(ComposeAppRoutes.CHILD_DETAILS_PAGE) {
                     popUpTo(ComposeAppRoutes.LANDING_PAGE) {
                         inclusive = true
                     }
                 }
-                composeAppViewModel.saveLandingPageAsViewed()
             }
         )
     }
