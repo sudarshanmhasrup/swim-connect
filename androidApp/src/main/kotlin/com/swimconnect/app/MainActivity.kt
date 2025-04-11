@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         initializeManagers()
         setContent {
-            AndroidApp(isDarkMode = false)
+            AndroidApp()
         }
     }
 
