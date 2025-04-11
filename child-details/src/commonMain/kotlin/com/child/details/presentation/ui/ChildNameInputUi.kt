@@ -87,17 +87,18 @@ private val getPrimaryButtonClickEvent: (
     childDetailsPageNavController: NavController,
     isEditingInformation: Boolean,
     enableFirstContinueButton: Boolean
-) -> Unit = { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableFirstContinueButton ->
-    childDetailsPageViewModel.saveChildName()
-    when {
-        enableFirstContinueButton && !isEditingInformation -> {
-            childDetailsPageNavController.navigate(
-                route = ChildDetailsPageRoutes.CHILD_AGE_INPUT_UI
-            )
-        }
+) -> Unit =
+    { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableFirstContinueButton ->
+        childDetailsPageViewModel.saveChildName()
+        when {
+            enableFirstContinueButton && !isEditingInformation -> {
+                childDetailsPageNavController.navigate(
+                    route = ChildDetailsPageRoutes.CHILD_AGE_INPUT_UI
+                )
+            }
 
-        enableFirstContinueButton && isEditingInformation -> {
-            childDetailsPageNavController.popBackStack()
+            enableFirstContinueButton && isEditingInformation -> {
+                childDetailsPageNavController.popBackStack()
+            }
         }
     }
-}

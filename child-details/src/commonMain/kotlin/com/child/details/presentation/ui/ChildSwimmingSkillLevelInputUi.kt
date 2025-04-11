@@ -66,17 +66,18 @@ private val primaryButtonClickEvent: (
     childDetailsPageNavController: NavController,
     isEditingInformation: Boolean,
     enableThirdContinueButton: Boolean
-) -> Unit = { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableThirdContinueButton ->
-    childDetailsPageViewModel.saveChildSwimmingSkillLevel()
-    when {
-        enableThirdContinueButton && !isEditingInformation -> {
-            childDetailsPageNavController.navigate(
-                route = ChildDetailsPageRoutes.ALERT_TIME_INPUT_UI
-            )
-        }
+) -> Unit =
+    { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableThirdContinueButton ->
+        childDetailsPageViewModel.saveChildSwimmingSkillLevel()
+        when {
+            enableThirdContinueButton && !isEditingInformation -> {
+                childDetailsPageNavController.navigate(
+                    route = ChildDetailsPageRoutes.ALERT_TIME_INPUT_UI
+                )
+            }
 
-        enableThirdContinueButton && isEditingInformation -> {
-            childDetailsPageNavController.popBackStack()
+            enableThirdContinueButton && isEditingInformation -> {
+                childDetailsPageNavController.popBackStack()
+            }
         }
     }
-}

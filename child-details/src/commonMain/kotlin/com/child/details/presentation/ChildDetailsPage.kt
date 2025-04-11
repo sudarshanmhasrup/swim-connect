@@ -1,9 +1,5 @@
 package com.child.details.presentation
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -62,7 +58,7 @@ fun ChildDetailsPage(
                 childDetailsPageNavController = childDetailsPageNavController
             )
         }
-        if(childDetailsUiState.value.showBackButtonContainer) {
+        if (childDetailsUiState.value.showBackButtonContainer) {
             BackButtonContainer(
                 modifier = Modifier.backButtonContainerModifier(),
                 onBackButtonClicked = {

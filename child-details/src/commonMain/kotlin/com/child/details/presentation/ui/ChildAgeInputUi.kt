@@ -95,17 +95,18 @@ private val getPrimaryButtonClickEvent: (
     childDetailsPageNavController: NavController,
     isEditingInformation: Boolean,
     enableSecondContinueButton: Boolean
-) -> Unit = { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableSecondContinueButton ->
-    childDetailsPageViewModel.saveChildAge()
-    when {
-        enableSecondContinueButton && !isEditingInformation -> {
-            childDetailsPageNavController.navigate(
-                route = ChildDetailsPageRoutes.CHILD_SWIMMING_SKILL_LEVEL_UI
-            )
-        }
+) -> Unit =
+    { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableSecondContinueButton ->
+        childDetailsPageViewModel.saveChildAge()
+        when {
+            enableSecondContinueButton && !isEditingInformation -> {
+                childDetailsPageNavController.navigate(
+                    route = ChildDetailsPageRoutes.CHILD_SWIMMING_SKILL_LEVEL_UI
+                )
+            }
 
-        enableSecondContinueButton && isEditingInformation -> {
-            childDetailsPageNavController.popBackStack()
+            enableSecondContinueButton && isEditingInformation -> {
+                childDetailsPageNavController.popBackStack()
+            }
         }
     }
-}
