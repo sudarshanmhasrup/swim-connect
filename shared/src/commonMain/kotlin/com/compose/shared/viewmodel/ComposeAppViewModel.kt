@@ -25,7 +25,7 @@ class ComposeAppViewModel : ViewModel() {
         val childDetailsPageViewStatus = UserPreferenceManager.getPreference(
             key = childDetailsPageViewedStatusPreferenceKey
         )
-        return true
+        return childDetailsPageViewStatus != null
     }
 
     fun saveChildDetailsPageAsViewed() {
