@@ -34,6 +34,7 @@ fun CustomAlertTimeInputUi(
 
     val primaryButtonClickEvent: () -> Unit = {
         getPrimaryButtonClickEvent(
+            childDetailsPageViewModel,
             childDetailsPageNavController,
             childDetailsUiState.value.isEditingInformation,
             childDetailsUiState.value.enableFifthContinueButton
@@ -80,20 +81,23 @@ fun CustomAlertTimeInputUi(
 }
 
 private val getPrimaryButtonClickEvent: (
+    childDetailsPageViewModel: ChildDetailsPageViewModel,
     childDetailsPageNavController: NavController,
     isEditingInformation: Boolean,
     enableFifthContinueButton: Boolean
-) -> Unit = { childDetailsPageNavController, isEditingInformation, enableFifthContinueButton ->
-    when {
-        enableFifthContinueButton && !isEditingInformation -> {
-            childDetailsPageNavController.navigate(
-                route = ChildDetailsPageRoutes.MODE_OF_ALERT_INPUT_UI
-            )
-        }
+) -> Unit =
+    { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableFifthContinueButton ->
+        childDetailsPageViewModel.saveCustomAlertTime()
+        when {
+            enableFifthContinueButton && !isEditingInformation -> {
+                childDetailsPageNavController.navigate(
+                    route = ChildDetailsPageRoutes.MODE_OF_ALERT_INPUT_UI
+                )
+            }
 
-        enableFifthContinueButton && isEditingInformation -> {
-            childDetailsPageNavController.popBackStack()
-            childDetailsPageNavController.popBackStack()
+            enableFifthContinueButton && isEditingInformation -> {
+                childDetailsPageNavController.popBackStack()
+                childDetailsPageNavController.popBackStack()
+            }
         }
     }
-}

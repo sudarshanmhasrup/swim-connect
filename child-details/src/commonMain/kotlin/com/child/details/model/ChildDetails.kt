@@ -1,8 +1,4 @@
-package com.child.details.domain
-
-import com.child.details.model.AlertMode
-import com.child.details.model.AlertTime
-import com.child.details.model.ChildSwimmingSkillLevel
+package com.child.details.model
 
 data class ChildDetails(
     val name: String,

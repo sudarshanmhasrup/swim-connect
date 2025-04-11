@@ -10,9 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
 import com.child.details.child_details.generated.resources.Res
 import com.child.details.child_details.generated.resources.ic_back
+import com.design.system.api.ComposeAppTheme
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -30,7 +32,11 @@ fun BackButtonContainer(
     Box(modifier = modifier) {
         // Back button
         Box(contentAlignment = Alignment.Center, modifier = backButtonModifier) {
-            Image(painter = painterResource(resource = backIcon), contentDescription = "Go back")
+            Image(
+                painter = painterResource(resource = backIcon),
+                contentDescription = "Go back",
+                colorFilter = ColorFilter.tint(color = ComposeAppTheme.colors.primaryFontColor)
+            )
         }
     }
 }

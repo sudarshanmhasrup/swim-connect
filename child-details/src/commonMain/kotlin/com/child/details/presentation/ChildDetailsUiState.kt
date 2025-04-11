@@ -21,5 +21,5 @@ data class ChildDetailsUiState(
     val enableSixthContinueButton: Boolean = false,
     val isConfirmationPage: Boolean = false,
     val isEditingInformation: Boolean = false,
-    val showBackButtonContainer: Boolean = false
+    val showBackButtonContainer: Boolean = true
 )

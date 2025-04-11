@@ -51,6 +51,7 @@ fun ChildSwimmingSkillLevelInputUi(
             modifier = Modifier.fillMaxWidth(),
             onClick = {
                 primaryButtonClickEvent(
+                    childDetailsPageViewModel,
                     childDetailsPageNavController,
                     childDetailsUiState.value.isEditingInformation,
                     childDetailsUiState.value.enableThirdContinueButton
@@ -61,10 +62,12 @@ fun ChildSwimmingSkillLevelInputUi(
 }
 
 private val primaryButtonClickEvent: (
+    childDetailsPageViewModel: ChildDetailsPageViewModel,
     childDetailsPageNavController: NavController,
     isEditingInformation: Boolean,
     enableThirdContinueButton: Boolean
-) -> Unit = { childDetailsPageNavController, isEditingInformation, enableThirdContinueButton ->
+) -> Unit = { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableThirdContinueButton ->
+    childDetailsPageViewModel.saveChildSwimmingSkillLevel()
     when {
         enableThirdContinueButton && !isEditingInformation -> {
             childDetailsPageNavController.navigate(

@@ -23,6 +23,7 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.ui)
             implementation(project(":designSystem"))
+            implementation(project(":platform-apis"))
             implementation(project(":shared"))
         }
     }

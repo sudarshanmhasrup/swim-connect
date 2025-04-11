@@ -34,6 +34,7 @@ fun ChildAgeInputUi(
 
     val primaryButtonClickEvent: () -> Unit = {
         getPrimaryButtonClickEvent(
+            childDetailsPageViewModel,
             childDetailsPageNavController,
             childDetailsUiState.value.isEditingInformation,
             childDetailsUiState.value.enableSecondContinueButton
@@ -90,10 +91,12 @@ fun ChildAgeInputUi(
 }
 
 private val getPrimaryButtonClickEvent: (
+    childDetailsPageViewModel: ChildDetailsPageViewModel,
     childDetailsPageNavController: NavController,
     isEditingInformation: Boolean,
     enableSecondContinueButton: Boolean
-) -> Unit = { childDetailsPageNavController, isEditingInformation, enableSecondContinueButton ->
+) -> Unit = { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableSecondContinueButton ->
+    childDetailsPageViewModel.saveChildAge()
     when {
         enableSecondContinueButton && !isEditingInformation -> {
             childDetailsPageNavController.navigate(

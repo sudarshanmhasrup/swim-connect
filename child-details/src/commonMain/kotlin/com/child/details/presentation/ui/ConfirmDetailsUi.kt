@@ -25,10 +25,13 @@ import com.child.details.util.annotatedString
 import com.compose.shared.components.PrimaryButton
 import com.compose.shared.extentions.buttonStyleListItemModifier
 import com.compose.shared.extentions.saveAndContinueButtonBoxModifier
+import com.compose.shared.routes.ComposeAppRoutes
+import com.compose.shared.viewmodel.ComposeAppViewModel
 import com.design.system.api.ComposeAppTheme
 
 @Composable
 fun ConfirmDetailsUi(
+    composeAppViewModel: ComposeAppViewModel,
     childDetailsPageViewModel: ChildDetailsPageViewModel,
     composeAppNavController: NavController,
     childDetailsPageNavController: NavController,
@@ -63,7 +66,12 @@ fun ConfirmDetailsUi(
                 enabled = true,
                 modifier = Modifier.fillMaxWidth(),
                 onClick = {
-
+                    composeAppViewModel.saveChildDetailsPageAsViewed()
+                    composeAppNavController.navigate(ComposeAppRoutes.DISCOVER_DEVICES_PAGE) {
+                        popUpTo(ComposeAppRoutes.DISCOVER_DEVICES_PAGE) {
+                            inclusive = true
+                        }
+                    }
                 }
             )
         }
@@ -77,6 +85,7 @@ private fun ButtonStyleListItem(
     onClick: () -> Unit
 ) {
     val primaryColor = ComposeAppTheme.colors.primaryColor
+    val primaryFontColor = ComposeAppTheme.colors.primaryFontColor
 
     val dividerModifier = Modifier
         .background(color = ComposeAppTheme.colors.borderColor)
@@ -95,6 +104,7 @@ private fun ButtonStyleListItem(
             BasicText(
                 text = annotatedLabel,
                 style = ComposeAppTheme.typography.inputLabel,
+                color = ColorProducer { primaryFontColor },
                 maxLines = 2
             )
             BasicText(

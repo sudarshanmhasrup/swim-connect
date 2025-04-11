@@ -1,9 +1,11 @@
-package com.child.details.model
+package com.child.details.data
 
 import com.child.details.child_details.generated.resources.Res
 import com.child.details.child_details.generated.resources.child_swimming_skill_level_option_1_label
 import com.child.details.child_details.generated.resources.child_swimming_skill_level_option_2_label
 import com.child.details.child_details.generated.resources.child_swimming_skill_level_option_3_label
+import com.child.details.model.ChildSwimmingSkillLevel
+import com.child.details.model.SelectionOption
 
 object ChildSwimmingSkillLevelOptionsList {
     private val childSwimmingSkillLevelOptionList = listOf(

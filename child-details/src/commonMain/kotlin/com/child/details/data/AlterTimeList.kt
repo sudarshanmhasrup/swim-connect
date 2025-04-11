@@ -1,10 +1,12 @@
-package com.child.details.model
+package com.child.details.data
 
 import com.child.details.child_details.generated.resources.Res
 import com.child.details.child_details.generated.resources.alert_time_option_1_label
 import com.child.details.child_details.generated.resources.alert_time_option_2_label
 import com.child.details.child_details.generated.resources.alert_time_option_3_label
 import com.child.details.child_details.generated.resources.alert_time_option_4_label
+import com.child.details.model.AlertTime
+import com.child.details.model.SelectionOption
 
 object AlterTimeList {
     private val alertTimeOptionList = listOf(

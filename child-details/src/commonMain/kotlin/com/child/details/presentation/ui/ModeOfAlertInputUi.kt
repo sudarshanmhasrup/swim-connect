@@ -68,6 +68,7 @@ fun ModeOfAlertInputUi(
             modifier = Modifier.fillMaxWidth(),
             onClick = {
                 primaryButtonClickEvent(
+                    childDetailsPageViewModel,
                     childDetailsPageNavController,
                     childDetailsUiState.value.isEditingInformation,
                     childDetailsUiState.value.enableSixthContinueButton
@@ -77,17 +78,22 @@ fun ModeOfAlertInputUi(
 }
 
 private val primaryButtonClickEvent: (
-    childDetailsPageNavController: NavController, isEditingInformation: Boolean, enableSixthContinue: Boolean
-) -> Unit = { childDetailsPageNavController, isEditingInformation, enableSixthContinueButton ->
-    when {
-        enableSixthContinueButton && !isEditingInformation -> {
-            childDetailsPageNavController.navigate(
-                route = ChildDetailsPageRoutes.CONFIRM_DETAILS_UI
-            )
-        }
+    childDetailsPageViewModel: ChildDetailsPageViewModel,
+    childDetailsPageNavController: NavController,
+    isEditingInformation: Boolean,
+    enableSixthContinue: Boolean
+) -> Unit =
+    { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableSixthContinueButton ->
+        childDetailsPageViewModel.saveModeOfAlert()
+        when {
+            enableSixthContinueButton && !isEditingInformation -> {
+                childDetailsPageNavController.navigate(
+                    route = ChildDetailsPageRoutes.CONFIRM_DETAILS_UI
+                )
+            }
 
-        enableSixthContinueButton && isEditingInformation -> {
-            childDetailsPageNavController.popBackStack()
+            enableSixthContinueButton && isEditingInformation -> {
+                childDetailsPageNavController.popBackStack()
+            }
         }
     }
-}

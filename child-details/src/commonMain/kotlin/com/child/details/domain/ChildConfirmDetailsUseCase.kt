@@ -1,9 +1,10 @@
 package com.child.details.domain
 
+import com.child.details.data.ConfirmChildDetailsList
 import com.child.details.model.AlertMode
 import com.child.details.model.AlertTime
+import com.child.details.model.ChildDetails
 import com.child.details.model.ChildSwimmingSkillLevel
-import com.child.details.model.ConfirmChildDetailsList
 import com.child.details.model.ConfirmChildDetailsListItem
 import com.child.details.model.DetailType
 
@@ -49,10 +50,10 @@ object ChildConfirmDetailsUseCase {
 
     private fun updateAlertTimeOfTheChild(value: AlertTime, customTime: String? = null) {
         val alertTime = when (value) {
-            AlertTime.TWO -> "Unskilled - After 2 seconds."
-            AlertTime.TEN -> "Semi-skilled - After 10 seconds."
-            AlertTime.FIFTEEN -> "Skilled - After 15 seconds."
-            else -> "Custom - After ${customTime ?: 0} seconds."
+            AlertTime.TWO -> "Unskilled - After 2 seconds"
+            AlertTime.TEN -> "Semi-skilled - After 10 seconds"
+            AlertTime.FIFTEEN -> "Skilled - After 15 seconds"
+            else -> "Custom - After ${customTime ?: 0} seconds"
         }
         ConfirmChildDetailsList.updateDetail(type = DetailType.ALERT_TIME, value = alertTime)
     }

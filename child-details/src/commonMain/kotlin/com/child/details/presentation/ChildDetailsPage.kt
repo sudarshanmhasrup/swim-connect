@@ -12,7 +12,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.child.details.child_details.generated.resources.Res
@@ -25,13 +24,15 @@ import com.child.details.presentation.components.ChildDetailsPageHeadingAndMessa
 import com.child.details.presentation.navigation.ChildDetailsPageNavigation
 import com.compose.shared.extentions.backButtonContainerModifier
 import com.compose.shared.extentions.childDetailsPageHeadingModifier
+import com.compose.shared.viewmodel.ComposeAppViewModel
 
 @Composable
 fun ChildDetailsPage(
+    composeAppViewModel: ComposeAppViewModel,
+    childDetailsPageViewModel: ChildDetailsPageViewModel,
     composeAppNavController: NavController,
     modifier: Modifier = Modifier
 ) {
-    val childDetailsPageViewModel: ChildDetailsPageViewModel = viewModel()
     val childDetailsUiState = childDetailsPageViewModel.childDetailsUiState.collectAsState()
 
     val childDetailsPageNavController = rememberNavController()
@@ -55,6 +56,7 @@ fun ChildDetailsPage(
                 modifier = Modifier.childDetailsPageHeadingModifier()
             )
             ChildDetailsPageNavigation(
+                composeAppViewModel = composeAppViewModel,
                 childDetailsPageViewModel = childDetailsPageViewModel,
                 composeAppNavController = composeAppNavController,
                 childDetailsPageNavController = childDetailsPageNavController

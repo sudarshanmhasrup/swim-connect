@@ -33,6 +33,7 @@ fun ChildNameInputUi(
 
     val primaryButtonClickEvent: () -> Unit = {
         getPrimaryButtonClickEvent(
+            childDetailsPageViewModel,
             childDetailsPageNavController,
             childDetailsUiState.value.isEditingInformation,
             childDetailsUiState.value.enableFirstContinueButton
@@ -82,10 +83,12 @@ fun ChildNameInputUi(
 }
 
 private val getPrimaryButtonClickEvent: (
+    childDetailsPageViewModel: ChildDetailsPageViewModel,
     childDetailsPageNavController: NavController,
     isEditingInformation: Boolean,
     enableFirstContinueButton: Boolean
-) -> Unit = { childDetailsPageNavController, isEditingInformation, enableFirstContinueButton ->
+) -> Unit = { childDetailsPageViewModel, childDetailsPageNavController, isEditingInformation, enableFirstContinueButton ->
+    childDetailsPageViewModel.saveChildName()
     when {
         enableFirstContinueButton && !isEditingInformation -> {
             childDetailsPageNavController.navigate(

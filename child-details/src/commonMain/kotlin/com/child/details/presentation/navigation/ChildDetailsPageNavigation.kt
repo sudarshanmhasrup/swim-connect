@@ -4,6 +4,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
@@ -19,14 +20,24 @@ import com.child.details.presentation.ui.CustomAlertTimeInputUi
 import com.child.details.presentation.ui.ModeOfAlertInputUi
 import com.compose.shared.extentions.childDetailsPageInputUiModifier
 import com.compose.shared.extentions.confirmChildDetailsUiModifier
+import com.compose.shared.viewmodel.ComposeAppViewModel
 
 @Composable
 fun ChildDetailsPageNavigation(
+    composeAppViewModel: ComposeAppViewModel,
     childDetailsPageViewModel: ChildDetailsPageViewModel,
     composeAppNavController: NavController,
     childDetailsPageNavController: NavHostController
 ) {
-    val startDestination = ChildDetailsPageRoutes.CHILD_NAME_INPUT_UI
+    val childDetailsPageUiState = childDetailsPageViewModel.childDetailsUiState.value
+
+    val startDestination = if (childDetailsPageUiState.modeOfAlert == null) {
+        childDetailsPageViewModel.hideBackButtonContainer()
+        ChildDetailsPageRoutes.CHILD_NAME_INPUT_UI
+    } else {
+        ChildDetailsPageRoutes.CONFIRM_DETAILS_UI
+    }
+
     NavHost(
         navController = childDetailsPageNavController,
         startDestination = startDestination,
@@ -87,9 +98,10 @@ fun ChildDetailsPageNavigation(
         }
         composable(route = ChildDetailsPageRoutes.CONFIRM_DETAILS_UI) {
             ConfirmDetailsUi(
+                composeAppViewModel = composeAppViewModel,
                 childDetailsPageViewModel = childDetailsPageViewModel,
-                childDetailsPageNavController = childDetailsPageNavController,
                 composeAppNavController = composeAppNavController,
+                childDetailsPageNavController = childDetailsPageNavController,
                 modifier = Modifier.confirmChildDetailsUiModifier()
             )
         }

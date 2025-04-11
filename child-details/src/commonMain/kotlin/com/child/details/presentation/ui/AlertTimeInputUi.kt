@@ -53,6 +53,7 @@ fun AlertTimeInputUi(
             modifier = Modifier.fillMaxWidth(),
             onClick = {
                 primaryButtonClickHandler(
+                    childDetailsPageViewModel,
                     childDetailsPageNavController,
                     childDetailsUiState.value.alertTime,
                     childDetailsUiState.value.enableFourthContinueButton,
@@ -64,12 +65,14 @@ fun AlertTimeInputUi(
 }
 
 private val primaryButtonClickHandler: (
+    childDetailsPageViewModel: ChildDetailsPageViewModel,
     childDetailsPageNavController: NavController,
     alertTime: AlertTime?,
     enableFourthContinueButton: Boolean,
     isEditingInformation: Boolean
 ) -> Unit =
-    { childDetailsPageNavController, alertTime, enableFourthContinueButton, isEditingInformation ->
+    { childDetailsPageViewModel, childDetailsPageNavController, alertTime, enableFourthContinueButton, isEditingInformation ->
+        childDetailsPageViewModel.saveAlertTime()
         when {
             enableFourthContinueButton && !isEditingInformation && alertTime != AlertTime.CUSTOM -> {
                 childDetailsPageNavController.navigate(
