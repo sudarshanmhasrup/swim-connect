@@ -50,7 +50,7 @@ fun Modifier.finishSetupPagePrimaryButtonAndContainerModifier(): Modifier {
 }
 
 @Composable
-fun Modifier.childDetailsPageHeadingModifier(): Modifier {
+fun Modifier.childDetailsPageHeadingAndMessageModifier(): Modifier {
     return this
         .fillMaxWidth()
         .padding(start = 20.dp, end = 20.dp, top = 40.dp)
@@ -96,4 +96,11 @@ fun Modifier.saveAndContinueButtonBoxModifier(): Modifier {
     return this
         .fillMaxWidth()
         .padding(horizontal = 24.dp, vertical = 20.dp)
+}
+
+@Composable
+fun Modifier.discoverDevicesPageHeadingAndMessageModifier(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(start = 20.dp, end = 20.dp, top = 40.dp)
 }
