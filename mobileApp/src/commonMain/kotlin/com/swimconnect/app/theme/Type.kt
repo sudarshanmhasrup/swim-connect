@@ -16,6 +16,12 @@ fun getTypography(): Typography {
             fontSize = 24.sp,
             lineHeight = 32.sp,
         ),
+        bodyHeadlineSmall = TextStyle(
+            fontFamily = fontFamily,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 18.sp,
+            lineHeight = 32.sp
+        ),
         bodyLabelLarge = TextStyle(
             fontFamily = fontFamily,
             fontWeight = FontWeight.SemiBold,
