@@ -6,6 +6,7 @@ import androidx.compose.ui.text.TextStyle
 @Immutable
 data class Typography(
     val bodyHeadline: TextStyle = TextStyle(),
+    val bodyLabelLarge: TextStyle = TextStyle(),
     val bodyMessage: TextStyle = TextStyle(),
     val buttonLabel: TextStyle = TextStyle(),
     val inputLabel: TextStyle = TextStyle(),
