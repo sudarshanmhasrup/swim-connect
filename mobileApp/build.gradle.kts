@@ -28,7 +28,7 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.foundation)
             implementation(compose.ui)
-            implementation(project(":designSystem"))
+            implementation(project(":design-system"))
             implementation(project(":shared"))
             api(project(":platform-apis"))
             implementation(project(":child-details"))

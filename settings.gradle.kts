@@ -32,7 +32,7 @@ dependencyResolutionManagement {
 
 include(":androidApp")
 include(":mobileApp")
-include(":designSystem")
+include(":design-system")
 include(":shared")
 include(":platform-apis")
 include(":child-details")
