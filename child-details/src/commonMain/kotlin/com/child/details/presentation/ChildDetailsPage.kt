@@ -19,7 +19,7 @@ import com.child.details.presentation.components.BackButtonContainer
 import com.child.details.presentation.components.ChildDetailsPageHeadingAndMessage
 import com.child.details.presentation.navigation.ChildDetailsPageNavigation
 import com.compose.shared.extentions.backButtonContainerModifier
-import com.compose.shared.extentions.childDetailsPageHeadingModifier
+import com.compose.shared.extentions.childDetailsPageHeadingAndMessageModifier
 import com.compose.shared.viewmodel.ComposeAppViewModel
 
 @Composable
@@ -49,7 +49,7 @@ fun ChildDetailsPage(
             ChildDetailsPageHeadingAndMessage(
                 heading = pageHeading,
                 message = pageMessage,
-                modifier = Modifier.childDetailsPageHeadingModifier()
+                modifier = Modifier.childDetailsPageHeadingAndMessageModifier()
             )
             ChildDetailsPageNavigation(
                 composeAppViewModel = composeAppViewModel,
