@@ -1,4 +1,4 @@
-package com.compose.shared.components
+package com.compose.shared.presentation.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.border

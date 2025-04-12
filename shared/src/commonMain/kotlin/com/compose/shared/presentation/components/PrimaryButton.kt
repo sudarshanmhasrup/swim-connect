@@ -1,4 +1,4 @@
-package com.compose.shared.components
+package com.compose.shared.presentation.components
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape

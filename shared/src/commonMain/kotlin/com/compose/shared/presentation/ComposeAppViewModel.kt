@@ -1,4 +1,4 @@
-package com.compose.shared.viewmodel
+package com.compose.shared.presentation
 
 import androidx.lifecycle.ViewModel
 import com.platform.api.util.UserPreferenceManager

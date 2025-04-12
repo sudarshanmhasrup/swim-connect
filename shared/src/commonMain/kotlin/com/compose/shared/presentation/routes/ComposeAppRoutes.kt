@@ -1,4 +1,4 @@
-package com.compose.shared.routes
+package com.compose.shared.presentation.routes
 
 object ComposeAppRoutes {
     const val LANDING_PAGE = "LandingPage"
