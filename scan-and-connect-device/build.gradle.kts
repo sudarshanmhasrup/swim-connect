@@ -5,8 +5,8 @@ plugins {
     alias(libs.plugins.compose.multiplatform)
 }
 
-group = libs.versions.childDetails.groupId.get()
-version = libs.versions.childDetails.version.get()
+group = libs.versions.scanAndConnectDevice.groupId.get()
+version = libs.versions.scanAndConnectDevice.version.get()
 
 kotlin {
     androidTarget()
@@ -30,7 +30,7 @@ kotlin {
 }
 
 android {
-    namespace = libs.versions.childDetails.groupId.get()
+    namespace = libs.versions.scanAndConnectDevice.groupId.get()
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 }
 
