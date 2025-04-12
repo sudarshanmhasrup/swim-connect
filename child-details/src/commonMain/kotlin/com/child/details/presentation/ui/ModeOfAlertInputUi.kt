@@ -16,7 +16,7 @@ import com.child.details.child_details.generated.resources.save_button_label
 import com.child.details.presentation.ChildDetailsPageViewModel
 import com.child.details.presentation.components.PrimaryOptionSelection
 import com.child.details.presentation.navigation.ChildDetailsPageRoutes
-import com.compose.shared.components.PrimaryButton
+import com.compose.shared.presentation.components.PrimaryButton
 
 @Composable
 fun ModeOfAlertInputUi(

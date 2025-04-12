@@ -19,7 +19,7 @@ import com.child.details.presentation.ui.CustomAlertTimeInputUi
 import com.child.details.presentation.ui.ModeOfAlertInputUi
 import com.compose.shared.extentions.childDetailsPageInputUiModifier
 import com.compose.shared.extentions.confirmChildDetailsUiModifier
-import com.compose.shared.viewmodel.ComposeAppViewModel
+import com.compose.shared.presentation.ComposeAppViewModel
 
 @Composable
 fun ChildDetailsPageNavigation(

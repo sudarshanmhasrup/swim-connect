@@ -17,7 +17,7 @@ import com.child.details.model.AlertTime
 import com.child.details.presentation.ChildDetailsPageViewModel
 import com.child.details.presentation.components.PrimaryOptionSelection
 import com.child.details.presentation.navigation.ChildDetailsPageRoutes
-import com.compose.shared.components.PrimaryButton
+import com.compose.shared.presentation.components.PrimaryButton
 
 @Composable
 fun AlertTimeInputUi(

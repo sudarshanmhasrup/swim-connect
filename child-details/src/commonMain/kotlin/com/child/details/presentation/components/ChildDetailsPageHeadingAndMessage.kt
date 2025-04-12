@@ -12,7 +12,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.child.details.child_details.generated.resources.Res
 import com.child.details.child_details.generated.resources.ic_child
-import com.compose.shared.components.HeadingAndMessage
+import com.compose.shared.presentation.components.HeadingAndMessage
 import com.compose.shared.extentions.childDetailsPageHeadingImageModifier
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource

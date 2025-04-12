@@ -20,7 +20,7 @@ import com.child.details.presentation.components.ChildDetailsPageHeadingAndMessa
 import com.child.details.presentation.navigation.ChildDetailsPageNavigation
 import com.compose.shared.extentions.backButtonContainerModifier
 import com.compose.shared.extentions.childDetailsPageHeadingAndMessageModifier
-import com.compose.shared.viewmodel.ComposeAppViewModel
+import com.compose.shared.presentation.ComposeAppViewModel
 
 @Composable
 fun ChildDetailsPage(
@@ -44,8 +44,8 @@ fun ChildDetailsPage(
         Res.string.child_details_page_message
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = modifier.verticalScroll(state = rememberScrollState())) {
+    Box(modifier = modifier) {
+        Column(modifier = Modifier.fillMaxSize()) {
             ChildDetailsPageHeadingAndMessage(
                 heading = pageHeading,
                 message = pageMessage,
