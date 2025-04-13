@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="missing_permissions_dialogue_heading">Allow Permissions!</string>
+    <string name="missing_permissions_dialogue_message">Please grant the necessary permissions to scan for and connect to nearby available SwimConnect devices.</string>
+    <string name="permissions_granted_dialogue_heading">Permissions are granted!</string>
+    <string name="permissions_granted_dialogue_message">The required permissions have been granted, and you're ready to start scanning for nearby SwimConnect devices!</string>
+    <string name="done_button_label">Done</string>
+    <string name="nearby_devices_permission_label">Nearby devices</string>
+    <string name="nearby_devices_permission_description">Allow Nearby Devices permission to scan and connect via Bluetooth.\n</string>
+    <string name="location_permission_label">Location</string>
+    <string name="location_permission_description">Allow Location and Nearby Devices permissions to scan and connect via Bluetooth.\n</string>
+    <string name="allowed_button_label">Allowed ✓</string>"
+    <string name="allow_button_label">Allow</string>"
     <string name="discover_devices_page_title">Scan nearby device</string>
     <string name="discover_devices_page_message_scanning">Please wait! We’re scanning all nearby available SwimConnect devices. Please make sure your device is withing the range.</string>
     <string name="discover_devices_page_message_done_scanning">Scanning complete! Here are the nearby available SwimConnect devices. Make sure your device is within range.</string>
