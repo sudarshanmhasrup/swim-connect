@@ -18,6 +18,7 @@ This order can also be seen in the module declarations in `settings.gradle.kts`.
 4) `shared`.
 5) `platform-apis`.
 6) `child-details`.
+7) `scan-and-connect-device`.
 
 #### Information about each module
 
@@ -39,7 +40,7 @@ This order can also be seen in the module declarations in `settings.gradle.kts`.
   basic information. It contains all required logic and UI components for collecting and saving
   basic information of the child. `ChildDetailsPage` is declared as a module because it contains a
   little bit of Extra logic so declaring it as a module makes it easy to manage the source code.
-- `discoverDevices`: This module contains all the source code required for discovering and
+- `scan-and-connect-device`: This module contains all the source code required for discovering and
   connecting to nearby available `SwimConnect` devices. It also contains all the UI components
   required for discovering and connecting to devices including `Missing Permission Dialogue UI` and
   all required pages.
