@@ -18,13 +18,14 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.lifecycle.viewmodel.compose)
+            implementation(compose.material3)
             implementation(libs.navigation.compose)
             implementation(compose.components.resources)
             implementation(compose.foundation)
             implementation(compose.ui)
             implementation(project(":design-system"))
-            implementation(project(":platform-apis"))
             implementation(project(":shared"))
+            implementation(project(":platform-apis"))
         }
     }
 }
