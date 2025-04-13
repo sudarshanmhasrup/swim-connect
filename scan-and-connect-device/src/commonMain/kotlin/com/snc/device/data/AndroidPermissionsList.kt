@@ -23,16 +23,16 @@ val androidPermissionsList = listOf(
         showOnUi = true
     ),
     RuntimePermission(
-        isPermissionGranted = false,
-        permission = Permission.BLUETOOTH_CONNECT,
-        showOnUi = false
-    ),
-    RuntimePermission(
         image = Res.drawable.ic_location,
         label = Res.string.location_permission_label,
         description = Res.string.location_permission_description,
         isPermissionGranted = false,
         permission = Permission.LOCATION,
         showOnUi = true
+    ),
+    RuntimePermission(
+        isPermissionGranted = false,
+        permission = Permission.BLUETOOTH_CONNECT,
+        showOnUi = false
     )
 )
