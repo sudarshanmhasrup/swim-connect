@@ -47,5 +47,5 @@ This order can also be seen in the module declarations in `settings.gradle.kts`.
 
 ### Prototype screenshots
 
-<img alt="Prototype flow container 1" src="./assets/flow_container_1.svg">
-<img alt="Prototype flow container 1" src="./assets/flow_container_2.svg">
+<img alt="Prototype flow container 1" src="./assets/flow_container_1.png">
+<img alt="Prototype flow container 1" src="./assets/flow_container_2.png">
