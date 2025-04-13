@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
@@ -143,4 +144,46 @@ fun Modifier.deviceIconAndContainerModifier(backgroundColor: Color): Modifier {
     return this
         .background(color = backgroundColor, shape = RoundedCornerShape(1000.dp))
         .padding(horizontal = 16.dp, vertical = 12.dp)
+}
+
+@Composable
+fun Modifier.dialogBoxDoneButtonAndContainer(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(horizontal = 8.dp, vertical = 20.dp)
+}
+
+@Composable
+fun Modifier.dialogueBoxImageAndContainerModifier(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(top = 20.dp, bottom = 40.dp)
+}
+
+@Composable
+fun Modifier.dialogueBoxHeadingAndMessageModifier(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(horizontal = 20.dp)
+}
+
+@Composable
+fun Modifier.permissionsListModifier(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(horizontal = 8.dp, vertical = 20.dp)
+}
+
+@Composable
+fun Modifier.permissionListAdapterModifier(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(horizontal = 20.dp)
+}
+
+@Composable
+fun Modifier.permissionImageModifier(): Modifier {
+    return this
+        .height(28.dp)
+        .width(28.dp)
 }
