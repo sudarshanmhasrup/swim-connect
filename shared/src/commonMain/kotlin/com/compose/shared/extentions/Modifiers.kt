@@ -26,6 +26,7 @@ fun Modifier.backgroundContainerModifier(backgroundColor: Color): Modifier {
 fun Modifier.pageModifier(scrollState: ScrollState): Modifier {
     return this
         .statusBarsPadding()
+        .statusBarsPadding()
         .fillMaxSize()
         .verticalScroll(scrollState)
 }
@@ -168,7 +169,7 @@ fun Modifier.dialogueBoxHeadingAndMessageModifier(): Modifier {
 }
 
 @Composable
-fun Modifier.permissionsListModifier(): Modifier {
+fun Modifier.permissionsListModifier(scrollState: ScrollState): Modifier {
     return this
         .fillMaxWidth()
         .padding(horizontal = 8.dp, vertical = 20.dp)
