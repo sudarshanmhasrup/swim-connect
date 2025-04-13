@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="discover_devices_page_title">Scan nearby device</string>
+    <string name="discover_devices_page_message_scanning">Please wait! We’re scanning all nearby available SwimConnect devices. Please make sure your device is withing the range.</string>
+    <string name="discover_devices_page_message_done_scanning">Scanning complete! Here are the nearby available SwimConnect devices. Make sure your device is within range.</string>
+    <string name="scanning_devices_label">Scanning devices</string>
+    <string name="done_scanning_label">Done scanning</string>
+    <string name="connect_button_label">Connect</string>"
+    <string name="rescan_button_label">Rescan</string>"
+</resources>
