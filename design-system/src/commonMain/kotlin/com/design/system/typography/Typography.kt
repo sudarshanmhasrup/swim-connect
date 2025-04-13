@@ -7,8 +7,8 @@ import androidx.compose.ui.text.TextStyle
 data class Typography(
     val bodyHeadline: TextStyle = TextStyle(),
     val bodyHeadlineMedium: TextStyle = TextStyle(),
-    val bodyHeadlineSmall: TextStyle = TextStyle(),
     val bodyLabelLarge: TextStyle = TextStyle(),
+    val bodyHeadlineSmall: TextStyle = TextStyle(),
     val bodyMessage: TextStyle = TextStyle(),
     val buttonLabel: TextStyle = TextStyle(),
     val inputLabel: TextStyle = TextStyle(),
