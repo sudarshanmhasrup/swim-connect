@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.platform.api.util.BlueFalconManager
 import com.platform.api.util.DataStoreManager
 
 class MainActivity : ComponentActivity() {
@@ -20,5 +21,6 @@ class MainActivity : ComponentActivity() {
 
     private fun initializeManagers() {
         DataStoreManager.initialize(context = this)
+        BlueFalconManager.initialize(applicationContext = this.application)
     }
 }
