@@ -4,6 +4,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -12,8 +13,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.child.details.presentation.ChildDetailsPage
 import com.child.details.presentation.ChildDetailsPageViewModel
-import com.compose.shared.routes.ComposeAppRoutes
-import com.compose.shared.viewmodel.ComposeAppViewModel
+import com.compose.shared.extentions.pageModifier
+import com.compose.shared.presentation.ComposeAppViewModel
+import com.compose.shared.presentation.routes.ComposeAppRoutes
+import com.snc.device.presentation.DiscoverDevicesPage
 import com.swimconnect.app.presentation.pages.finishSetupPage.FinishSetupPage
 import com.swimconnect.app.presentation.pages.landingPage.LandingPageScreen
 
@@ -56,13 +59,13 @@ fun ComposeAppNavigation(composeAppViewModel: ComposeAppViewModel) {
             LandingPageScreen(
                 composeAppViewModel = composeAppViewModel,
                 composeAppNavController = composeAppNavController,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.pageModifier(rememberScrollState())
             )
         }
         composable(route = ComposeAppRoutes.FINISH_SETUP_PAGE) {
             FinishSetupPage(
                 composeAppNavController = composeAppNavController,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.pageModifier(rememberScrollState())
             )
         }
         composable(route = ComposeAppRoutes.CHILD_DETAILS_PAGE) {
@@ -70,11 +73,11 @@ fun ComposeAppNavigation(composeAppViewModel: ComposeAppViewModel) {
                 composeAppViewModel = composeAppViewModel,
                 childDetailsPageViewModel = childDetailsPageViewModel,
                 composeAppNavController = composeAppNavController,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.pageModifier(rememberScrollState())
             )
         }
         composable(route = ComposeAppRoutes.DISCOVER_DEVICES_PAGE) {
-
+            DiscoverDevicesPage(modifier = Modifier.fillMaxSize())
         }
     }
 }
