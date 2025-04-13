@@ -8,11 +8,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import com.compose.shared.components.HeadingAndMessage
-import com.compose.shared.components.PrimaryButton
 import com.compose.shared.extentions.finishAccountSetupPageHeadingAndMessageModifier
 import com.compose.shared.extentions.finishSetupPagePrimaryButtonAndContainerModifier
-import com.compose.shared.routes.ComposeAppRoutes
+import com.compose.shared.presentation.components.HeadingAndMessage
+import com.compose.shared.presentation.components.PrimaryButton
+import com.compose.shared.presentation.routes.ComposeAppRoutes
 import com.swimconnect.app.mobileapp.generated.resources.Res
 import com.swimconnect.app.mobileapp.generated.resources.finish_setup_button_title
 import com.swimconnect.app.mobileapp.generated.resources.finish_setup_page_heading

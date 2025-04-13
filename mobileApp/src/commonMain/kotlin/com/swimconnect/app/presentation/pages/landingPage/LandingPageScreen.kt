@@ -12,12 +12,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.compose.shared.components.HeadingAndMessage
-import com.compose.shared.components.PrimaryButton
 import com.compose.shared.extentions.landingPageHeadingAndMessageModifier
 import com.compose.shared.extentions.letsConnectButtonAndBackgroundModifier
-import com.compose.shared.routes.ComposeAppRoutes
-import com.compose.shared.viewmodel.ComposeAppViewModel
+import com.compose.shared.presentation.ComposeAppViewModel
+import com.compose.shared.presentation.components.HeadingAndMessage
+import com.compose.shared.presentation.components.PrimaryButton
+import com.compose.shared.presentation.routes.ComposeAppRoutes
 import com.swimconnect.app.mobileapp.generated.resources.Res
 import com.swimconnect.app.mobileapp.generated.resources.app_name
 import com.swimconnect.app.mobileapp.generated.resources.ic_swimming
