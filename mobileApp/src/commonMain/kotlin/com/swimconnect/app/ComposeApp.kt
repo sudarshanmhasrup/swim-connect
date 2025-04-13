@@ -67,7 +67,7 @@ private fun SystemBarBackground(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(height)
-                .alpha(0.80f)
+                .alpha(0.60f)
                 .background(color = backgroundColor)
         )
     }
