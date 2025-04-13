@@ -8,7 +8,7 @@
     <string name="save_button_label">Save</string>"
     <string name="child_age_input_placeholder">Age of the child</string>
     <string name="child_age_input_hint">10</string>
-    <string name="child_age_input_error">Please enter the child's age within the range of 0–17.</string>"
+    <string name="child_age_input_error">Please enter the child's age within the range of 0–17.</string>
     <string name="child_swimming_skill_level_input_placeholder">Child’s swimming skill level</string>
     <string name="child_swimming_skill_level_option_1_label">Unskilled </string>
     <string name="child_swimming_skill_level_option_2_label">Semi-skilled</string>
@@ -20,7 +20,7 @@
     <string name="alert_time_option_4_label">Set custom time</string>"
     <string name="custom_alert_time_input_placeholder">Custom alert time in seconds</string>
     <string name="custom_alert_time_input_hint">20</string>
-    <string name="custom_alert_time_input_error">Kindly enter an alert time between 5 and 30 seconds.</string>"
+    <string name="custom_alert_time_input_error">Kindly enter an alert time between 5 and 30 seconds.</string>
     <string name="mode_of_alert_input_placeholder">Mode of alert</string>
     <string name="mode_of_alert_option_1_label">Vibration</string>
     <string name="mode_of_alert_option_2_label">Alarm</string>

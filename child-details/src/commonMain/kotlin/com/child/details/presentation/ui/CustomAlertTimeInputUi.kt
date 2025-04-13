@@ -19,9 +19,9 @@ import com.child.details.child_details.generated.resources.next_button_label
 import com.child.details.child_details.generated.resources.save_button_label
 import com.child.details.presentation.ChildDetailsPageViewModel
 import com.child.details.presentation.navigation.ChildDetailsPageRoutes
+import com.compose.shared.extentions.childAgeInputKeyboardOptions
 import com.compose.shared.presentation.components.PrimaryButton
 import com.compose.shared.presentation.components.PrimaryUserInputField
-import com.compose.shared.extentions.childAgeInputKeyboardOptions
 import com.compose.shared.util.KeyboardFocusRequestManager
 
 @Composable
