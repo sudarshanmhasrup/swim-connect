@@ -8,7 +8,7 @@ import com.child.details.child_details.generated.resources.alert_time_option_4_l
 import com.child.details.model.AlertTime
 import com.child.details.model.SelectionOption
 
-object AlterTimeList {
+object AlertTimeList {
     private val alertTimeOptionList = listOf(
         SelectionOption(
             label = Res.string.alert_time_option_1_label,

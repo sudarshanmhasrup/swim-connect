@@ -13,9 +13,12 @@ import com.child.details.child_details.generated.resources.mode_of_alert_option_
 import com.child.details.child_details.generated.resources.mode_of_alert_option_2_label
 import com.child.details.child_details.generated.resources.mode_of_alert_option_3_label
 import com.child.details.data.AlertModeList
-import com.child.details.data.AlterTimeList
+import com.child.details.data.AlertTimeList
 import com.child.details.data.ChildSwimmingSkillLevelOptionsList
+import com.child.details.domain.AlertModeUseCase
+import com.child.details.domain.AlertTimeUseCase
 import com.child.details.domain.ChildConfirmDetailsUseCase
+import com.child.details.domain.ChildSwimmingSkillLevelOptionsUseCase
 import com.child.details.model.AlertMode
 import com.child.details.model.AlertTime
 import com.child.details.model.ChildDetails
@@ -48,15 +51,15 @@ class ChildDetailsPageViewModel : ViewModel() {
     }
 
     fun getChildSwimmingSkillLevelOptions(): List<SelectionOption> {
-        return ChildSwimmingSkillLevelOptionsList.getChildSwimmingSkillLevelOptions()
+        return ChildSwimmingSkillLevelOptionsUseCase.getChildSwimmingSkillLevelOptions()
     }
 
     fun getCustomAlterTimeOptions(): List<SelectionOption> {
-        return AlterTimeList.getAlertTimeOptions()
+        return AlertTimeUseCase.getAlertTimeOptions()
     }
 
     fun getModeOfAlertOptions(): List<SelectionOption> {
-        return AlertModeList.getAlertModeOptionList()
+        return AlertModeUseCase.getAlertModeOptionList()
     }
 
     fun getConfirmChildDetailsOptionList(): List<ConfirmChildDetailsListItem> {
