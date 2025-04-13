@@ -156,6 +156,13 @@ fun Modifier.dialogBoxUiModifier(scrollState: ScrollState): Modifier {
 }
 
 @Composable
+fun Modifier.dialogBoxDoneButtonAndContainer(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(horizontal = 8.dp, vertical = 20.dp)
+}
+
+@Composable
 fun Modifier.dialogueBoxImageAndContainerModifier(): Modifier {
     return this
         .fillMaxWidth()
