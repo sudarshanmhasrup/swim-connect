@@ -77,7 +77,7 @@ fun ComposeAppNavigation(composeAppViewModel: ComposeAppViewModel) {
             )
         }
         composable(route = ComposeAppRoutes.DISCOVER_DEVICES_PAGE) {
-            DiscoverDevicesPage(modifier = Modifier.fillMaxSize())
+            DiscoverDevicesPage(modifier = Modifier.pageModifier(rememberScrollState()))
         }
     }
 }
