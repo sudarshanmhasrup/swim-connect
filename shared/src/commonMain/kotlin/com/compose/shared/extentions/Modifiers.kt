@@ -148,10 +148,11 @@ fun Modifier.deviceIconAndContainerModifier(backgroundColor: Color): Modifier {
 }
 
 @Composable
-fun Modifier.dialogBoxDoneButtonAndContainer(): Modifier {
+fun Modifier.dialogBoxUiModifier(scrollState: ScrollState): Modifier {
     return this
         .fillMaxWidth()
-        .padding(horizontal = 8.dp, vertical = 20.dp)
+        .verticalScroll(scrollState)
+        .statusBarsPadding()
 }
 
 @Composable
