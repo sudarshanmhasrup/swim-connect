@@ -17,6 +17,10 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(libs.permissions.location)
+            implementation(libs.permissions.bluetooth)
+            implementation(libs.permissions.compose)
+            implementation(libs.permissions)
             implementation(libs.lifecycle.viewmodel.compose)
             implementation(compose.material3)
             implementation(libs.navigation.compose)
