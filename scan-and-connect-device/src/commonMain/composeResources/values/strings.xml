@@ -22,4 +22,7 @@
     <string name="turn_on_bluetooth_ui_message">Please enable Bluetooth to scan for and connect to nearby devices.</string>"
     <string name="turn_on_location_ui_heading">Turn on location</string>
     <string name="turn_on_location_ui_message">Please enable Location to scan for nearby devices.</string>
+    <string name="try_again_ui_heading">No device found</string>
+    <string name="try_again_ui_message">No nearby SwimConnect device found. Please ensure your device is powered on and within range.</string>
+    <string name="try_again_button_label">Try again</string>"
 </resources>
