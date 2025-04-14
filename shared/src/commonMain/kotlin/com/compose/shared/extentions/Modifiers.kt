@@ -196,3 +196,18 @@ fun Modifier.permissionImageModifier(): Modifier {
         .height(28.dp)
         .width(28.dp)
 }
+
+@Composable
+fun Modifier.uiIconBoxModifier(backgroundColor: Color): Modifier {
+    return this
+        .background(color = backgroundColor, shape = RoundedCornerShape(1000.dp))
+        .height(140.dp)
+        .width(140.dp)
+}
+
+@Composable
+fun Modifier.commonUiButtonAndBackgroundModifier(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(all = 20.dp)
+}
