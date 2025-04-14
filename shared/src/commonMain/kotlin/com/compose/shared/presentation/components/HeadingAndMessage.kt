@@ -19,14 +19,22 @@ import org.jetbrains.compose.resources.stringResource
 fun HeadingAndMessage(
     heading: StringResource,
     message: StringResource,
+    smallHeading: Boolean = false,
     modifier: Modifier = Modifier
 ) {
     val primaryFontColor = ComposeAppTheme.colors.primaryFontColor
     val secondaryFontColor = ComposeAppTheme.colors.secondaryFontColor
+
+    val headingStyle = if (smallHeading) {
+        ComposeAppTheme.typography.bodyHeadlineMedium.copy(textAlign = TextAlign.Center)
+    } else {
+        ComposeAppTheme.typography.bodyHeadline.copy(textAlign = TextAlign.Center)
+    }
+
     Column(modifier = modifier) {
         BasicText(
             text = stringResource(resource = heading),
-            style = ComposeAppTheme.typography.bodyHeadline.copy(textAlign = TextAlign.Center),
+            style = headingStyle,
             color = ColorProducer { primaryFontColor },
             modifier = Modifier.fillMaxWidth()
         )
