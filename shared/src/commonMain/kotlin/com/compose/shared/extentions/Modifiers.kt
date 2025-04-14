@@ -206,6 +206,13 @@ fun Modifier.uiIconBoxModifier(backgroundColor: Color): Modifier {
 }
 
 @Composable
+fun Modifier.commonUiHeadingModifier(): Modifier {
+    return this
+        .fillMaxWidth()
+        .padding(start = 20.dp, end = 20.dp, top = 20.dp)
+}
+
+@Composable
 fun Modifier.commonUiButtonAndBackgroundModifier(): Modifier {
     return this
         .fillMaxWidth()
