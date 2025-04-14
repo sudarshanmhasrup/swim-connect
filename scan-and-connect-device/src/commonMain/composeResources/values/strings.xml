@@ -18,4 +18,8 @@
     <string name="done_scanning_label">Done scanning</string>
     <string name="connect_button_label">Connect</string>"
     <string name="rescan_button_label">Rescan</string>"
+    <string name="turn_on_bluetooth_ui_heading">Turn on Bluetooth</string>
+    <string name="turn_on_bluetooth_ui_message">Please enable Bluetooth to scan for and connect to nearby devices.</string>"
+    <string name="turn_on_location_ui_heading">Turn on location</string>
+    <string name="turn_on_location_ui_message">Please enable Location to scan for nearby devices.</string>
 </resources>
