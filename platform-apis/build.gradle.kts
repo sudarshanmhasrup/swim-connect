@@ -15,7 +15,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.blue.falcon)
+            api(libs.blue.falcon)
             api(libs.androidx.datastore.preferences)
             api(libs.androidx.datastore)
         }
