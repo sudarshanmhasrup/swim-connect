@@ -29,5 +29,5 @@ android {
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 }
 
-// Customize build directory: Compose app theme module
+// Customize build directory
 layout.buildDirectory.set(file("$rootDir/.build/designSystem"))
