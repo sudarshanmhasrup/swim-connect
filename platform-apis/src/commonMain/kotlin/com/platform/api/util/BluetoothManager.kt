@@ -1,6 +1,8 @@
 package com.platform.api.util
 
 import com.platform.api.model.SwimConnectDevice
+import dev.bluefalcon.BluetoothManagerState
+import dev.bluefalcon.BluetoothService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
