@@ -1,6 +1,5 @@
 [versions]
 # Library and plugin versions
-blueFalcon = "2.0.0"
 kotlin = "2.1.20"
 androidGradlePlugin = "8.9.1"
 activityCompose = "1.10.1"
@@ -9,6 +8,7 @@ composeMultiplatform = "1.7.3"
 navigationCompose = "2.9.0-alpha15"
 lifecycleViewmodelCompose = "2.8.4"
 datastore = "1.1.4"
+blueFalcon = "2.0.0"
 moko = "0.19.1"
 
 # Android app package information
@@ -46,11 +46,11 @@ scanAndConnectDevice-version = "1.0.0-SNAPSHOT"
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
-blue-falcon = { module = "dev.bluefalcon:blue-falcon", version.ref = "blueFalcon" }
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 androidx-datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+blue-falcon = { module = "dev.bluefalcon:blue-falcon", version.ref = "blueFalcon" }
 permissions = { module = "dev.icerock.moko:permissions", version.ref = "moko" }
 permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko" }
 permissions-bluetooth = { module = "dev.icerock.moko:permissions-bluetooth", version.ref = "moko" }
