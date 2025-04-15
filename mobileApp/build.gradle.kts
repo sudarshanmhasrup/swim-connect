@@ -32,7 +32,7 @@ kotlin {
             implementation(project(":shared"))
             api(project(":platform-apis"))
             implementation(project(":child-details"))
-            implementation(project(":scan-and-connect-device"))
+            api(project(":scan-and-connect-device"))
         }
     }
 }
