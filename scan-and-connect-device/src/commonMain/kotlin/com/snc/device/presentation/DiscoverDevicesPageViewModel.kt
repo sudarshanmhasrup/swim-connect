@@ -28,7 +28,7 @@ class DiscoverDevicesPageViewModel(
     private val currentPlatform = getPlatform()
 
     init {
-        if (currentPlatform == TargetPlatform.ANDROID) {
+        if (currentPlatform == TargetPlatform.IOS) {
             _discoverDevicesPageUiState.value = _discoverDevicesPageUiState.value.copy(
                 allPermissionsAreGranted = true,
                 isLocationEnabled = true
