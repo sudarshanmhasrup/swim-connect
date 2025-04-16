@@ -7,6 +7,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.snc.device.presentation.navigation.DiscoverDevicesPageNavigation
+import com.snc.device.util.DiscoverDevicesPageLifecycleManager
 import dev.icerock.moko.permissions.compose.BindEffect
 import dev.icerock.moko.permissions.compose.rememberPermissionsControllerFactory
 
@@ -20,6 +21,10 @@ fun DiscoverDevicesPage(modifier: Modifier = Modifier) {
     val discoverDevicesPageViewModel = viewModel {
         DiscoverDevicesPageViewModel(permissionController = permissionController)
     }
+
+    DiscoverDevicesPageLifecycleManager.initialize(
+        discoverDevicesPageViewModel = discoverDevicesPageViewModel
+    )
 
     Column(modifier = Modifier.fillMaxSize()) {
         DiscoverDevicesPageNavigation(discoverDevicesPageViewModel = discoverDevicesPageViewModel)
