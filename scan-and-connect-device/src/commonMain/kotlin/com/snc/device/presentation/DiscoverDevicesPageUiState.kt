@@ -9,7 +9,7 @@ data class DiscoverDevicesPageUiState(
     val allPermissionsAreGranted: Boolean = false,
     val mainPermissionAreGranted: Boolean = false,
     val runtimePermissionsList: List<RuntimePermission> = emptyList(),
-    val isBluetoothEnabled: Boolean = false,
-    val isLocationEnabled: Boolean = false,
+    val isBluetoothEnabled: Boolean = true,
+    val isLocationEnabled: Boolean = true,
     val emptyDeviceList: Boolean = false
 )
