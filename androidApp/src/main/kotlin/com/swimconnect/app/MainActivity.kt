@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.platform.api.util.BlueFalconManager
 import com.platform.api.util.DataStoreManager
+import com.snc.device.util.DiscoverDevicesPageLifecycleManager
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidApp()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        DiscoverDevicesPageLifecycleManager.onResume()
     }
 
     private fun initializeManagers() {
